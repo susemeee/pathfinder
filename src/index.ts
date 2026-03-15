@@ -280,8 +280,8 @@ addRouteOptions(
 });
 
 // ── Ensure login before API commands ───────────────────────────────
-program.hook("preAction", (thisCommand) => {
-  const name = thisCommand.name();
+program.hook("preAction", (_thisCommand, actionCommand) => {
+  const name = actionCommand.name();
   if (["login", "status", "logout"].includes(name)) return;
 
   try {
