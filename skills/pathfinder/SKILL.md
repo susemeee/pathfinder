@@ -1,6 +1,6 @@
 ---
 name: pathfinder
-description: 카카오 모빌리티 길찾기 API CLI. 주소/장소명/좌표로 자동차 길찾기, 다중 경유지 길찾기, 미래 운행정보 길찾기를 지원합니다.
+description: 한국 내 자동차 기반 길찾기가 필요할 때 사용합니다. 카카오 모빌리티 내비게이션 API를 통해 실시간/미래 교통 상황 기반의 경로 탐색, 소요 시간, 거리, 택시비/통행료 정보를 제공합니다. 주소, 장소명, 좌표 모두 지원합니다.
 ---
 
 Usage: pathfinder [options] [command]
@@ -22,13 +22,21 @@ Commands:
 
 ## 인증
 
-최초 사용 시 `pathfinder login`으로 카카오 REST API 키를 등록해야 합니다.
-키는 `~/.pathfinder/config.json`에 저장됩니다.
+최초 사용 시 카카오 REST API 키를 발급받아 등록해야 합니다.
 
+**API 키 발급 방법:**
+1. https://developers.kakao.com/ 에 로그인
+2. "내 애플리케이션" → "애플리케이션 추가하기"로 앱 생성
+3. 생성된 앱 선택 → 왼쪽 메뉴에서 "앱 키" 클릭
+4. "REST API 키"를 복사
+
+**키 등록:**
 ```
 pathfinder login
-pathfinder login -k YOUR_API_KEY
+pathfinder login -k YOUR_REST_API_KEY
 ```
+
+키는 `~/.pathfinder/config.json`에 저장됩니다.
 
 ## 위치 지정 방식
 
