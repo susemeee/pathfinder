@@ -1,6 +1,6 @@
 {
   "name": "@unlimiting/pathfinder",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "한국 길찾기 CLI (자동차 + 대중교통)",
   "type": "module",
   "bin": {

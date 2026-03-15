@@ -196,11 +196,10 @@ function extractRouteOptions(opts: Record<string, unknown>): RouteOptions {
   };
 }
 
-// ── directions ─────────────────────────────────────────────────────
+// ── car ────────────────────────────────────────────────────────────
 addRouteOptions(
   program
-    .command("directions")
-    .alias("dir")
+    .command("car")
     .description("자동차 길찾기 (출발지 → 도착지, 최대 5개 경유지)")
     .requiredOption(
       "-o, --origin <location>",
@@ -238,10 +237,10 @@ addRouteOptions(
   }
 });
 
-// ── waypoints ──────────────────────────────────────────────────────
+// ── waypoint ───────────────────────────────────────────────────────
 addRouteOptions(
   program
-    .command("waypoints")
+    .command("waypoint")
     .alias("wp")
     .description("다중 경유지 길찾기 (최대 30개 경유지, POST)")
     .requiredOption(
@@ -343,7 +342,7 @@ addRouteOptions(
 // ── transit ────────────────────────────────────────────────────────
 program
   .command("transit")
-  .alias("pt")
+  .alias("ts")
   .description("대중교통 길찾기 (출발지 → 도착지)")
   .requiredOption(
     "-o, --origin <location>",
